@@ -1,0 +1,233 @@
+/* common used colors */
+:root {
+    --main-color:rgb(15, 57, 70);
+    --secondary-color: rgb(199, 202, 181); 
+    --thrid-color:rgb(71, 67, 67); 
+
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+
+}
+a{
+    color: var(--thrid-color);
+    text-decoration: none;
+    height: 100%;
+}
+
+body{
+    font-family: 'Helvetica','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: var(--secondary-color);
+    height: 100%;
+}
+
+/* for borders and sections */
+.border {
+    padding: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: space-between;
+
+}
+
+/* Thumbnail Caption Details */
+.caption {
+    position:absolute;
+    padding: 5px;
+    bottom: 16px;
+    left: 1px;
+    text-align: left;
+    font-size: 12px;
+    color: var(--secondary-color);
+    background-color: var(--thrid-color);
+}
+
+.background {
+    height: 500px;
+    width: 100%;
+    margin-bottom: 25px;
+    background-image: url("../images/challenge-2bkgrd.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.my-selfie{
+    margin:25px;
+    position: relative;
+
+}
+
+
+
+header h1 {
+        color:var(--secondary-color);
+        margin: 5px 10px 5px 30px;
+        font-size: 50px;
+    
+}
+header nav{
+        justify-content: flex-end;
+        padding-top: 20px;
+        margin-right:20px; 
+        font-family: 'Helvetica','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 24px;
+        display: flex;
+        
+}
+/*nav list*/
+header nav ul li {
+    display:inline-block;
+    margin-left:25px;
+    color: var(--thrid-color);
+
+}
+/* nav links */
+header nav ul li a{
+    color: var(--secondary-color)
+}
+/* handles all <p> */
+p{
+    justify-content:space-evenly;
+    align-items: center;
+    width: 50%;
+    font-size:24px;
+    padding:5px 35px 0 20px;
+    
+}
+
+section{
+    display: flex;
+    margin: 10px;
+    padding: 20px;
+    width: 100%;
+}
+/* handles the layout of sections */
+.bio{
+    line-height: 2;
+    padding-bottom: 50px;
+    width: 100%;
+    display: flex;
+    margin: 20px auto;
+}
+
+
+.title{
+    display: inline-block;
+    border-right: 5px solid;
+    margin-right: 35px; 
+    font-size: 48px;
+    color: var(--main-color);
+    text-align: right;
+    flex-basis: 25%;
+    padding: 30px;
+}
+
+.thumbnail-display{
+    flex-wrap:wrap;
+    display:flex; 
+    flex: 0 0 66%;
+}
+
+.thumbnail-bio{
+    position: relative;
+    margin: 12px;
+    width: fit-content;
+}
+
+/* thumbnail changes color when hovered over*/
+.thumbnail-detail:hover {
+    background-color: gray;
+}
+
+img {
+    border: 5px solid var(--thrid-color);
+    size: 10px 10px 10px;
+}
+
+/* medium viewport */
+@media screen and (max-width: 980px) {
+   
+    header h1 {
+        margin: 5px;
+        text-align: center;
+        width: 100%;
+    }
+
+    header nav ul li a {
+          font-size: 20px;
+    }
+
+    header nav ul {
+          justify-content: center;
+          margin-top: 20px;
+          width: 100%;
+    }
+
+    header {
+          flex-direction: column;
+          justify-content: center;
+          padding-bottom: 0;
+          position: relative;
+          text-align: center;
+    }
+
+    p {
+          flex: 2 100%;
+          justify-content: left;
+          text-align: left;
+    }
+}
+/* smaller viewport */
+@media screen and (max-width: 768px) {
+
+
+    .bio {
+        flex-direction: column;
+    }
+    .my-picture {
+        justify-content: center;
+    }
+    p {
+        flex-direction: column;
+        justify-content: center;
+        display: contents;
+        padding: 10px;
+    }
+    section {
+        padding: 30px 15px;
+        text-align: center;
+    }
+    
+    .thumbnail-bio img {
+        flex: 0 32%;
+        margin-right: 0;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        width: 90%;
+    }
+    .thumbnail-bio {
+        flex: 2 100%;
+        text-align: left;
+        justify-content: left;
+        display: flex;
+      }
+     
+    a {
+        flex-direction: column;
+        justify-content: center;
+        display: contents;
+        padding: 10px;
+    }
+   
+    .title {
+        font-size: 48px;
+        text-align: center;
+        flex-direction: column;
+        border-bottom: 5px solid;
+        border-right: none;
+        padding: 15px;
+        margin: 0;
+    }
+}
